@@ -1,0 +1,83 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "1efc26a977c19b7128d7",
+  "position": {
+    "x": 1127.2318412552449,
+    "y": 339.30111042309755,
+    "z": 0,
+    "height": 300,
+    "width": 300
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_EAP_CNSLT_TYPE"
+                    }
+                  },
+                  "Property": "EAP Management Consultation Group Code"
+                }
+              },
+              "queryRef": "DIM_EAP_CNSLT_TYPE.EAP Management Consultation Group Code",
+              "nativeQueryRef": "EAP Management Consultation Group Code"
+            },
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_EAP_CNSLT_TYPE"
+                    }
+                  },
+                  "Property": "EAP Management Consultation Type Code"
+                }
+              },
+              "queryRef": "DIM_EAP_CNSLT_TYPE.EAP Management Consultation Type Code",
+              "nativeQueryRef": "EAP Management Consultation Type Code"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "d298b6b553ca0e681622",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_EAP_CNSLT_TYPE"
+              }
+            },
+            "Property": "EAP Management Consultation Group Code"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "2301cdf2c5c9b1de0ad1",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_EAP_CNSLT_TYPE"
+              }
+            },
+            "Property": "EAP Management Consultation Type Code"
+          }
+        },
+        "type": "Categorical"
+      }
+    ]
+  }
+}

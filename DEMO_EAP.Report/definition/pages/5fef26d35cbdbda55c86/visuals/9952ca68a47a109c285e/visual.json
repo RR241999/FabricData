@@ -1,0 +1,93 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/item/report/definition/visualContainer/2.12.0/schema.json",
+  "name": "9952ca68a47a109c285e",
+  "position": {
+    "x": 1563.0582824990329,
+    "y": 283.90923156266115,
+    "z": 0,
+    "height": 300,
+    "width": 300
+  },
+  "visual": {
+    "visualType": "tableEx",
+    "query": {
+      "queryState": {
+        "Values": {
+          "projections": [
+            {
+              "field": {
+                "Column": {
+                  "Expression": {
+                    "SourceRef": {
+                      "Entity": "DIM_EAP_CALR_TYPE"
+                    }
+                  },
+                  "Property": "EAP Incident Caller Type Description"
+                }
+              },
+              "queryRef": "DIM_EAP_CALR_TYPE.EAP Incident Caller Type Description",
+              "nativeQueryRef": "EAP Incident Caller Type Description"
+            },
+            {
+              "field": {
+                "Aggregation": {
+                  "Expression": {
+                    "Column": {
+                      "Expression": {
+                        "SourceRef": {
+                          "Entity": "DIM_EAP_CALR_TYPE"
+                        }
+                      },
+                      "Property": "SNAP_YEAR_MNTH_NBR"
+                    }
+                  },
+                  "Function": 0
+                }
+              },
+              "queryRef": "Sum(DIM_EAP_CALR_TYPE.SNAP_YEAR_MNTH_NBR)",
+              "nativeQueryRef": "Sum of SNAP_YEAR_MNTH_NBR"
+            }
+          ]
+        }
+      }
+    },
+    "drillFilterOtherVisuals": true
+  },
+  "filterConfig": {
+    "filters": [
+      {
+        "name": "40a070f1c2833666922b",
+        "field": {
+          "Column": {
+            "Expression": {
+              "SourceRef": {
+                "Entity": "DIM_EAP_CALR_TYPE"
+              }
+            },
+            "Property": "EAP Incident Caller Type Description"
+          }
+        },
+        "type": "Categorical"
+      },
+      {
+        "name": "391062335b81ddb0ad13",
+        "field": {
+          "Aggregation": {
+            "Expression": {
+              "Column": {
+                "Expression": {
+                  "SourceRef": {
+                    "Entity": "DIM_EAP_CALR_TYPE"
+                  }
+                },
+                "Property": "SNAP_YEAR_MNTH_NBR"
+              }
+            },
+            "Function": 0
+          }
+        },
+        "type": "Advanced"
+      }
+    ]
+  }
+}
